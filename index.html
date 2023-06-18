@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color App</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div>
+            <h1 class="h1-color-code" data-code-h1></h1>
+            <div class="btn-container">
+                <button class="btn" data-show-adjustment-color-panel></button>
+                <button class="btn" data-set-random-color></button>
+            </div>
+        </div>
+        <aside class="adjust-color-panel" data-adjust-color-panel>
+            <header class="aside-header">
+                <p class="p-title">Color adjustment</p>
+                <button class="close-panel material-symbols-outlined" data-close-panel title="Close"></button>
+            </header>
+            <main class="aside-main">
+                <div class="color-preview-container">
+                    <div class="color-preview" data-color-preview></div>
+                    <p class="color-code-container">Color code: <span class="color-code" data-code></span></p>
+                </div>
+                <section class="adjustments">
+                    <div class="labels">
+                        <label for="r-iput">Red:</label>
+                        <label for="g-iput">Green:</label>
+                        <label for="b-iput">Blue:</label>
+                        <label for="opacity-iput">Alpha: </label>
+                    </div>
+                    <div class="inputs">
+                        <input id="r-input" type="range" min="0" max="100" step="0.4" value="0" data-red
+                            data-color-adjustment>
+                        <input id="g-input" type="range" min="0" max="100" step="0.4" value="0" data-green
+                            data-color-adjustment>
+                        <input id="b-input" type="range" min="0" max="100" step="0.4" value="0" data-blue
+                            data-color-adjustment>
+                        <input id="opacity-input" type="range" min="0" max="1" step="0.1" value="1" data-opacity
+                            data-color-adjustment>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="btn-container">
+                    <button class="btn save-changes-btn" data-save-changes></button>
+                </div>
+            </footer>
+        </aside>
+        <div class="modal" data-modal></div>
+    </div>
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>
